@@ -14,7 +14,7 @@ void threadFunc(const vector<int>& vec, long long unsigned int& res) {
 
 int main() {
     long long unsigned int res = 0;
-    vector<int> vec(100000, 1);
+    vector<int> vec(100010, 1);
     const auto start = chrono::high_resolution_clock::now();
     thread t1(threadFunc, std::cref(vec), std::ref(res));
     t1.join();
